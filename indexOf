@@ -18,8 +18,19 @@ public class stringIndexOf {
         //the index position
         System.out.println(st4.indexOf(101));
         //is there a char e = 101 in the String? Yes than 1, No than its -1
-        System.out.println(st3.indexOf("H",3));
+        System.out.println(st3.indexOf("o",3));
         //if Index is behind the fromindex or the char is not there than the output is -1
+        //I do not understand the last one
 
     }
 }
+
+/*
+OUTPUT:
+
+First try 11
+17
+6
+1
+17
+*/
