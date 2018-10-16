@@ -1,0 +1,67 @@
+package apollo.exercises.ch08_collections;
+
+import java.util.HashMap;
+
+
+
+class Book{
+	String street;
+
+	public Book(String street) {
+		this.street = street;
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	@Override
+	public String toString() {
+		return "Book{" +
+				"street='" + street + '\'' +
+				'}';
+	}
+}
+
+
+public class Ex3_NamesAndAddresses {
+
+
+
+	// This is the main method that is executed as
+	// soon as the program starts.
+	public static void main(String[] args) {
+		
+		// Create a method called printAddress(HashMap book, String name)
+		//
+		HashMap book = new HashMap();
+		// map.put("Mike", "123 2nd Street, SF, CA 94105");
+		// map.put("Bob", "333 Folsom Street, SF, CA 94107");
+		// map.put("Joe", "45 King Street, SF, CA 94158");
+		//
+		printAddress(book, "Mike");
+
+		
+	}
+
+	public static void printAddress(HashMap book, String n){
+		HashMap<String, String> hashMap = new HashMap<>();
+
+		hashMap.put("Mike", "123 2nd Street, SF, CA 94105");
+		//hashMap.put("Bob", "333 Folsom Street, SF, CA 94107");
+		hashMap.put("Joe", "45 King Street, SF, CA 94158");
+		hashMap.put("Marie", "29 High Sky Street, SF, LA 72940");
+
+		if(hashMap.containsKey("Bob")){
+			System.out.println("Bob lives at the following street: "+hashMap.get("Bob"));
+		}else{
+			System.out.println("List of the people who live in various cities: " + "\n" + hashMap);
+		}
+	}
+
+
+}
