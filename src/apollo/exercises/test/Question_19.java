@@ -14,14 +14,18 @@ class Student {
         return "Student[" + name + ", " + age + "]";
     }
 
-    public boolean equals(Student obj) {
-        if(obj instanceof Student) {
-            Student stud = (Student)obj;
-            if(this.name.equals(stud.name) && this.age == stud.age) {
-                return true;
-            }
-        }
-        return false;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Student)) return false;
+        Student student = (Student) o;
+        return age == student.age &&
+                name.equals(student.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age);
     }
 }
 
